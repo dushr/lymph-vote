@@ -1,0 +1,15 @@
+registry:
+    class: lymph.discovery.zookeeper:ZookeeperServiceRegistry
+    hosts: 127.0.0.1:2181
+
+
+event_system:
+    class: lymph.events.kombu:KombuEventSystem
+    transport: amqp
+    hostname: 127.0.0.1
+
+
+instances:
+    vote:
+        command: lymph instance --config=conf/vote.yml
+        numprocesses: 1

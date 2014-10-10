@@ -1,0 +1,8 @@
+interfaces:
+    vote:
+        class: machine:VotingMachineService
+        logging_path: "/tmp/"
+    counter:
+        class: counter:VoteCountingService
+        logging_path: "/tmp/"
+
